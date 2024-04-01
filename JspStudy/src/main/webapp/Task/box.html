@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function goBox(){
+	//형식)document.폼객체명.입력양식객체명.속성명
+	/*		with(공통부분)
+			with(document.BoxMake){
+		if(col.value==0)
+			
+		else if(row.value==0)
+	}
+	*/
+	if(document.BoxMake.col.value==0){
+         alert("만들고자 하는 표의 가로(행)을 선택해주십시오");
+         return;
+    }
+	else if(document.BoxMake.row.value==0){
+         alert("만들고자 하는 표의 세로(행)을 선택해주십시오");
+         return;
+    }
+     document.BoxMake.submit();
+             
+}
+</script>
+<meta charset="UTF-8">
+<title>표 만들기</title>
+</head>
+<body>
+<form name="BoxMake" method="post" action="box_proc.jsp">
+표만들기 설정
+<br>
+가로(행)
+		<select name="col">
+			<option value="0"> 선택 </option>
+			<option value="1"> 1 </option>
+			<option value="2"> 2 </option>
+			<option value="3"> 3 </option>
+			<option value="4"> 4 </option>
+			<option value="5"> 5 </option>
+			<option value="6"> 6 </option>
+			<option value="7"> 7 </option>
+			<option value="8"> 8 </option>	
+			<option value="9"> 9 </option>	
+		</select><br>
+세로(열)
+		<select name="row">
+			<option value="0"> 선택 </option>
+			<option value="1"> 1 </option>
+			<option value="2"> 2 </option>
+			<option value="3"> 3 </option>
+			<option value="4"> 4 </option>
+			<option value="5"> 5 </option>
+			<option value="6"> 6 </option>
+			<option value="7"> 7 </option>
+			<option value="8"> 8 </option>	
+			<option value="9"> 9 </option>
+		</select><br>
+		<a href="JavaScript:goBox()">표만들기</a>
+		</form>
+</body>
+</html>
