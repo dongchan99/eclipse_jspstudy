@@ -20,6 +20,6 @@
 		</script>
 	*/
 	 %>
-	
+	<%=str%>
 </body>
 </html>
